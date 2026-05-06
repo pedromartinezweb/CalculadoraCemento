@@ -1,5 +1,5 @@
 const assert = require("node:assert/strict");
-const { calculateRecipe } = require("../script.js");
+const { calculateRecipe, detectLanguage } = require("../script.js");
 
 const mortar = calculateRecipe(25, "mortar", "medium");
 assert.equal(mortar.title, "Mortero medio");
@@ -20,5 +20,16 @@ assert.deepEqual(concrete.materials, [
 ]);
 
 assert.throws(() => calculateRecipe(0, "mortar", "medium"), /mayores que cero/);
+
+const englishMortar = calculateRecipe(25, "mortar", "medium", "en");
+assert.equal(englishMortar.title, "Mortar medium");
+assert.deepEqual(englishMortar.materials, [
+  { kind: "cement", name: "Cement", amount: 25, unit: "kg" },
+  { kind: "sand", name: "Sand", amount: 111, unit: "kg" },
+  { kind: "water", name: "Water", amount: 13.8, unit: "kg / liters" },
+]);
+
+assert.equal(detectLanguage(["en-US", "es-ES"]), "en");
+assert.equal(detectLanguage(["de-DE", "it-IT"]), "es");
 
 console.log("calculator tests passed");
