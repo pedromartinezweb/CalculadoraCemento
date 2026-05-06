@@ -30,6 +30,9 @@ assert.deepEqual(englishMortar.materials, [
 ]);
 
 assert.equal(detectLanguage(["en-US", "es-ES"]), "en");
-assert.equal(detectLanguage(["de-DE", "it-IT"]), "es");
+assert.equal(detectLanguage(["zh-CN", "en-US"]), "zh");
+assert.equal(detectLanguage(["ar-SA", "en-US"]), "ar");
+assert.equal(detectLanguage(["id-ID", "en-US"]), "id");
+assert.equal(detectLanguage(["it-IT", "nl-NL"]), "es");
 
 console.log("calculator tests passed");

@@ -7,7 +7,7 @@ URL: https://pedromartinezweb.github.io/CalculadoraCemento/
 Contenido principal:
 - Calcula cemento, arena, piedra y agua en kg.
 - Detecta el idioma del navegador.
-- Idiomas disponibles: espanol, ingles, frances y portugues.
+- Idiomas disponibles: espanol, ingles, chino, hindi, arabe, bengali, portugues, ruso, japones, frances, aleman e indonesio.
 - Usa recetas por peso para bascula.
 
 Permisos:
