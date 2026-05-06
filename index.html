@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f4efe6">
+    <title>Calculadora de mezclas</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="eyebrow">Mortero y hormigon</p>
+        <h1>Receta por peso</h1>
+        <p class="intro">
+          Introduce los kg de cemento, elige la mezcla y la resistencia.
+          Calcularemos arena, piedra y agua para usar con bascula.
+        </p>
+      </header>
+
+      <form class="calculator" id="recipe-form" novalidate>
+        <section class="card field" aria-labelledby="label-cement">
+          <div class="field-head">
+            <p id="label-cement" class="field-title">Cemento</p>
+            <p class="field-hint">En kg</p>
+          </div>
+
+          <div class="stepper" role="group" aria-label="Ajustar cemento">
+            <button type="button" class="stepper-btn" data-step="-1" aria-label="Restar 1 kg">&minus;</button>
+            <label class="stepper-input">
+              <input
+                id="cement-kg"
+                name="cementKg"
+                type="number"
+                min="0.5"
+                step="0.5"
+                value="25"
+                inputmode="decimal"
+                autocomplete="off"
+                aria-label="Kilogramos de cemento">
+              <span class="stepper-unit">kg</span>
+            </label>
+            <button type="button" class="stepper-btn" data-step="1" aria-label="Sumar 1 kg">&plus;</button>
+          </div>
+
+          <div class="presets" role="group" aria-label="Cantidades frecuentes">
+            <button type="button" class="chip" data-preset="5">5</button>
+            <button type="button" class="chip" data-preset="10">10</button>
+            <button type="button" class="chip" data-preset="25">25</button>
+            <button type="button" class="chip" data-preset="35">35</button>
+            <button type="button" class="chip" data-preset="50">50</button>
+          </div>
+        </section>
+
+        <fieldset class="card field segmented" data-options="2">
+          <legend class="field-title">Mezcla</legend>
+          <label class="segment">
+            <input type="radio" name="mixKind" value="mortar" checked>
+            <span>Mortero</span>
+          </label>
+          <label class="segment">
+            <input type="radio" name="mixKind" value="concrete">
+            <span>Hormigon</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="card field segmented" data-options="3">
+          <legend class="field-title">Resistencia</legend>
+          <label class="segment">
+            <input type="radio" name="strength" value="strong">
+            <span>Fuerte</span>
+          </label>
+          <label class="segment">
+            <input type="radio" name="strength" value="medium" checked>
+            <span>Media</span>
+          </label>
+          <label class="segment">
+            <input type="radio" name="strength" value="low">
+            <span>Baja</span>
+          </label>
+        </fieldset>
+      </form>
+
+      <section class="card result" aria-live="polite" aria-atomic="true">
+        <header class="result-head">
+          <span class="ratio-pill" id="recipe-ratio">Peso 1:4.44</span>
+          <h2 id="recipe-title">Mortero medio</h2>
+          <p class="note" id="recipe-note"></p>
+        </header>
+
+        <ul class="materials" id="recipe-cards"></ul>
+
+        <p class="warning">
+          Dosificacion pensada para bascula. El agua se pesa o mide en litros y se ajusta poco a poco
+          segun humedad de la arena, granulometria y consistencia necesaria.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
