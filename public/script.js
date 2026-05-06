@@ -626,7 +626,7 @@ function renderStructuredData(text) {
     description: text.description,
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Any",
-    url: "https://pedromartinezweb.github.io/CalculadoraCemento/",
+    url: "https://cemento.pedromartinezweb.com/",
     inLanguage: text.htmlLang,
     isAccessibleForFree: true,
   });

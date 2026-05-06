@@ -2,7 +2,7 @@
 
 Calculadora web gratuita para dosificar mortero y hormigon por peso.
 
-URL: https://pedromartinezweb.github.io/CalculadoraCemento/
+URL: https://cemento.pedromartinezweb.com/
 
 Contenido principal:
 - Calcula cemento, arena, piedra y agua en kg.
