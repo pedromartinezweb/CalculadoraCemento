@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Calculadora de cemento</title>
+  <desc id="desc">Saco de cemento con marca de calculo sobre fondo terracota</desc>
+  <rect width="512" height="512" rx="96" fill="#b86128"/>
+  <path fill="#fffaf1" d="M147 143c0-22 18-40 40-40h138c22 0 40 18 40 40v26h-34v-22c0-7-5-12-12-12H193c-7 0-12 5-12 12v22h-34v-26Z"/>
+  <path fill="#fffaf1" d="M126 181h260c22 0 39 18 37 40l-22 154c-3 20-20 35-40 35H151c-20 0-37-15-40-35L89 221c-3-22 14-40 37-40Z"/>
+  <path fill="#7e3c18" d="M160 239c0-9 7-16 16-16h160c9 0 16 7 16 16s-7 16-16 16H176c-9 0-16-7-16-16Zm0 64c0-9 7-16 16-16h79c9 0 16 7 16 16s-7 16-16 16h-79c-9 0-16-7-16-16Z"/>
+  <path fill="#b86128" d="M306 277h32v32h32v32h-32v32h-32v-32h-32v-32h32v-32Z"/>
+</svg>
